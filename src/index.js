@@ -1,13 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { AppProvider } from "./Context/ProductContext";
+import { FliterContextProvider } from "./Context/FliterContext";
+import { CartProvider } from "./Context/CartContext";
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <AppProvider>
+      <FliterContextProvider>
+      <CartProvider>
+        <App />
+        </CartProvider>
+      </FliterContextProvider>
+    </AppProvider>
   </React.StrictMode>
 );
 
