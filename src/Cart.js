@@ -1,6 +1,7 @@
 import React from 'react'
 import { useCartContext } from './Context/CartContext'
 import styled from 'styled-components';
+import Cartitem from './components/Cartitem';
 const Cart = () => {
 
   const {cart} = useCartContext();
@@ -17,6 +18,15 @@ const Cart = () => {
 </div>
 <hr/>
 </div>
+
+<div className="cart_item">
+  {
+    cart.map((curelm)=>{
+      return <Cartitem key={curelm.id}{...curelm}/>
+    })
+  }
+</div>
+
    </Wrapper>
   )
 }
