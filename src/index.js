@@ -3,19 +3,13 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { AppProvider } from "./Context/ProductContext";
-import { FliterContextProvider } from "./Context/FliterContext";
-import { CartProvider } from "./Context/CartContext";
+import { AppProvider } from "./context/ProductContext";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
     <AppProvider>
-      <FliterContextProvider>
-      <CartProvider>
-        <App />
-        </CartProvider>
-      </FliterContextProvider>
+      <App />
     </AppProvider>
   </React.StrictMode>
 );

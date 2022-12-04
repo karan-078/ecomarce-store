@@ -1,25 +1,350 @@
-/* *{
-padding: 0;
-margin: 0;
-box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  list-style: none;
+  text-decoration: none;
+  /* overflow-x: hidden; */
+}
+
+body {
+  position: absolute;
+}
+
+
+/* header style */
+
+.header_section {
+  width: 100vw;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  background-color: #e9ebef;
+  border: 1px solid #c6c4c4;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+  padding: 0 3rem;
+  position: relative;
+}
+
+.logo {
+  width: 6em;
+}
+
+.navbar {
+  padding: 0 2rem;
+  display: grid;
+  place-items: center;
+}
+
+
+
+.nav_lisst {
+  display: flex;
+  align-items: center;
+  gap: 1rem 3rem;
+}
+
+.nav_link {
+  color: black;
+}
+
+.mobile_nav_btn {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile_icon[name="close_mainu"] {
+  display: none;
+}
+
+.close_mainu {
+  display: none;
+}
+
+
+
+/* home page css */
+
+.hero {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* place-items: center; */
+}
+
+.home_containt {
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: 30rem;
+  letter-spacing: 1px;
+}
+
+.shooping_button {
+  background-color: #4b7cea;
+  margin-top: 1rem;
+  width: 7rem;
+  outline: none;
+  border: none;
+  padding: 0.6rem 0.4rem;
+  border-radius: 4px;
+  color: #f0f8ff;
+}
+
+.home_containt {
+  padding: 1rem 3rem;
 
 }
 
-body{borer
-     background: red;
-     
+.home_image {
+  width: 40rem;
+  height: 30rem;
+}
+
+/* .home_slider{
+  height: 20rem;
+  border: 2px solid black;
+} */
+/* slider for home image */
+.show_fetur_product_container {
+  display: grid;
+  place-items: center;
+
+
+}
+
+.show_fetur_product {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f8ff;
+  overflow: hidden;
+  padding: 2rem 2rem;
+  width: 90%;
+
+}
+
+.fetur_image {
+  width: 25rem;
+  padding: 0.1rem 0.1rem;
+  border-radius: 4px;
+  transition: transform .4s;
+}
+
+.caption {
+  padding: 0.5rem 1rem;
+  color: black;
+}
+
+.fetur_image:hover {
+  border: 1px solid #8d8e8f;
+  transform: scale(1.1)
+}
+
+/* .slidr_card_data{
+  border: 2px solid black;
 } */
 
-/* @media (max-width:${({theme})=> theme.media.mobile}) {
-     display: inline-block; 
-     z-index: 9999;
-     border: ${({theme})=>theme.colors.black}
-    */
+.card_data_flex_box {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  color: black;
+}
 
-.mcdsv {
- display: flex;
- flex-direction: column;
- justify-content: space-between;
-  padding: 0 3rem 0 0;
+.container_data {
+  display: grid;
+  place-items: center;
+}
+
+.intro_data,
+.main_heading {
+  width: 86%;
+  padding: 0.2rem 0.2rem;
+  font-weight: 600;
+}
+
+
+
+
+/* singale  page style  */
+
+.singlproduct_container {
+  padding-top: 10rem;
+  display: grid;
+  place-items: center;
+}
+
+.store_data_container {
+  display: grid;
+  width: 80%;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.singal_data_section {
+  width: 60%;
+
+}
+
+.singal_image_section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+}
+
+.Grid_four {
+  display: flex;
+  flex-direction: column;
+}
+
+;
+
+
+.box-image--style {
+  width: 10rem;
+  height: 10rem;
+}
+
+.image_fliter {
+  display: grid;
+  place-items: center;
+
+}
+
+.main_container_image_fliter {
+  display: grid;
   grid-template-columns: 0.4fr 1fr;
- }
+  gap: 1rem;
+
+
+}
+
+.grid {
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.box-image--style {
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  object-fit: contain;
+  cursor: pointer;
+
+}
+
+.main-screen {
+  display: grid;
+  place-items: center;
+  order: 1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+
+}
+
+
+.singal_data_section{
+  display: grid;
+  place-content: center;
+  padding-left: 3rem;
+}
+
+
+/* media quari for mobiel */
+
+@media screen and (max-width:765px) {
+  .header_section {
+    padding: 0 1rem;
+  }
+
+  .mobile_nav_btn {
+    display: inline-block;
+    z-index: 9999;
+  }
+
+  .mobile_icon {
+    font-size: 3rem;
+    color: black;
+  }
+
+
+  .active .mobile_icon {
+    display: none;
+    font-size: 4.2rem;
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    z-index: 9999;
+    color: black;
+    cursor: pointer;
+  }
+
+  .active .close_mainu {
+    display: inline-block;
+    font-size: 3rem;
+  }
+
+
+  .nav_lisst {
+    height: 100vh;
+    width: 20rem;
+    max-width: 40rem;
+    position: absolute;
+    top: 150%;
+    left: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    gap: 2rem 0;
+    /* transform: translateX(200%);
+    transition: all 0.3s linear; */
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #e9ebef;
+    /* overflow-x: hidden; */
+
+    cursor: pointer;
+
+  }
+
+  .active .nav_lisst {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-30%);
+    z-index: 999;
+    transform-origin: right;
+    transition: all 0.3s linear;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    gap: 2rem 0;
+
+  }
+
+
+  .fetur_image {
+    width: 20rem;
+    border-radius: 4px;
+    padding: 0 0;
+    transition: transform .4s;
+  }
+
+}
