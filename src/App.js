@@ -9,6 +9,7 @@ import Error from "./page/Error";
 import Cart from "./page/Cart";
 import './App.css'
 import Header from "./camponents/Header";
+import Footer from "./camponents/Footer";
 
 const App = () => {
 
@@ -27,7 +28,7 @@ const App = () => {
               <Route path="/singalproduct/:id" element={<SingleProduct />} />
               <Route path="*" element={<Error />} />
             </Routes>
-           
+           <Footer/>
         </Router>
      
     </>

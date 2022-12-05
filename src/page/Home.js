@@ -6,9 +6,10 @@ const Home = () => {
     <>
       <Herosection />
       <Fetureproducts />
-      
+    
     </>
   );
 };
+
 
 export default Home;

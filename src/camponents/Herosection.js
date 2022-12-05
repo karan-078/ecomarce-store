@@ -9,7 +9,7 @@ const Herosection = () => {
         <div className="container">
           <h2>ONLINE</h2>
           <h1>SHOPPING</h1>
-          <p>
+          <p >
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut
             voluptas distinctio quod magni quis pariatur fugit consequuntur
             quae modi nesciunt. Maxime autem libero in sed reiciendis ad,
