@@ -1,10 +1,28 @@
-import React from 'react'
+import React from "react";
+import Fliterproduct from "../camponents/Fliterproduct";
+import Productlist from "../camponents/Productlist";
+import Sort from "../camponents/Sort";
 const Product = () => {
   return (
-    <div>
-      <p>i am product page</p>
-    </div>
-  )
-}
+    <>
+      <div className="Products_page_container">
+        <div className="filter_function">
+          <Fliterproduct />
+        </div>
 
-export default Product
+        <div className="fliter_products">
+          <div className="sort_products">
+            <Sort />
+          </div>
+        
+
+         <div className="view_product">
+          <Productlist />
+          </div>
+      </div>
+      </div>
+    </>
+  );
+};
+
+export default Product;
