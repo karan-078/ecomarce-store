@@ -7,9 +7,10 @@ const Sort = () => {
     useFilterContext();
   return (
     <>
+    <div className="main_container_sort">
       {/* 1st column  */}
       
-      <div className="sorting-list--grid">
+      <div className="sorting-list">
         <button
           className={flex_view ? "active sort-btn" : "sort-btn"}
           onClick={setFlexview}
@@ -24,10 +25,16 @@ const Sort = () => {
           <BsList className="icon" />
         </button>
       </div>
+
+
+
       {/* 2nd column  */}
       <div className="product-data">
         <p>{`${filter_products.length} Product Available`}</p>
       </div>
+
+
+
 
       {/* 3rd column  */}
       <div className="sort-selection">
@@ -49,6 +56,9 @@ const Sort = () => {
           </select>
         </form>
       </div>
+      </div>
+
+      <hr />
       </>
   );
 };

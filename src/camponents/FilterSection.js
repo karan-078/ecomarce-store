@@ -1,5 +1,5 @@
 
-import { useFilterContext } from "../context/filter_context";
+import { useFilterContext } from "../context/FilterContext";
 import { FaCheck } from "react-icons/fa";
 import FormatPrice from "../price/FormetPrice"
 
@@ -42,27 +42,30 @@ const FilterSection = () => {
           <input
             type="text"
             name="text"
-            placeholder="Search"
+            placeholder="Search product"
             value={text}
             onChange={updateFilterValue}
           />
         </form>
       </div>
-
+      
+     
       <div className="filter-category">
         <h3>Category</h3>
         <div>
           {categoryData.map((curElem, index) => {
             return (
+              <div className="catogery">
               <button
                 key={index}
                 type="button"
                 name="category"
                 value={curElem}
-                className={curElem === category ? "active" : ""}
+                className={ curElem === category ? "active" : "" }
                 onClick={updateFilterValue}>
                 {curElem}
               </button>
+              </div>
             );
           })}
         </div>
@@ -89,7 +92,7 @@ const FilterSection = () => {
       </div>
 
       <div className="filter-colors colors">
-        <h3>Colors</h3>
+        <h3>Colors: </h3>
 
         <div className="filter-color-style">
           {colorsData.map((curColor, index) => {
@@ -102,7 +105,7 @@ const FilterSection = () => {
                   name="color"
                   className="color-all--style"
                   onClick={updateFilterValue}>
-                  all
+                  All
                 </button>
               );
             }
@@ -136,12 +139,12 @@ const FilterSection = () => {
           onChange={updateFilterValue}
         />
       </div>
-{/* 
+
       <div className="filter-clear">
-        <Button className="btn" onClick={clearFilters}>
+        <button className="btn" onClick={clearFilters}>
           Clear Filters
-        </Button>
-      </div> */}
+        </button>
+      </div>
    </>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import Fliterproduct from "../camponents/Fliterproduct";
+import FilterSection from "../camponents/FilterSection";
 import Productlist from "../camponents/Productlist";
 import Sort from "../camponents/Sort";
 const Product = () => {
@@ -7,7 +7,7 @@ const Product = () => {
     <>
       <div className="Products_page_container">
         <div className="filter_function">
-          <Fliterproduct />
+          <FilterSection />
         </div>
 
         <div className="fliter_products">
