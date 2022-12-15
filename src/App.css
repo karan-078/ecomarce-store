@@ -631,8 +631,42 @@ margin: 4px 0rem;
   border-right: 1px solid #8080808a;
 }
 
+.color_header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
 
+.color-style__{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
 
+.sub_total_container{
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  margin-top: 2rem;
+}
+.sub_total{
+ width: 80%;
+ display: flex;
+ align-items: center;
+ justify-content: right;
+ gap: 1rem;
+}
+
+.total_price{
+  color: #000000;
+  font-weight:bolder;
+  font-size:1.4rem;
+}
+.sutotal_heading{
+  color: rgb(14, 13, 13);
+  font-weight: 500;
+}
 
 /* media quari for mobiel */
 
@@ -887,4 +921,8 @@ width: 98%;
   gap: 1rem;
 }
 
+.sub_total{
+  width:95%;
+
+ }
 }
