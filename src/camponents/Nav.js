@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { CgMenu, CgClose } from "react-icons/cg";
+import { useCartContext } from "../context/CartContext";
+
 const Nav = () => {
+
+  const {cart} = useCartContext();
     const [menuIcon, setMenuIcon] = useState();
   return (
     <>
@@ -38,7 +42,7 @@ const Nav = () => {
             <NavLink to={"/cart"} className="nav_link troally-link" >
               <div className="cart-item">
                 <FiShoppingCart className="cart_troally" />
-                <span className="cart_total">0</span>
+                <span className="cart_total">{cart.length}</span>
               </div>
             </NavLink>
           </li>

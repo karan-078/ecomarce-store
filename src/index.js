@@ -8,13 +8,14 @@ import { FilterContextProvider } from "./context/FilterContext";
 import { CartProvider } from "./context/CartContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
+// dev-hnung70muetv2ywu.us.auth0.com
+// QyEfQpDGN65ROJR3Epxc7fqqcWfMnudU
 root.render(
   <React.StrictMode>
     <AppProvider>
       <FilterContextProvider>
         <CartProvider>
-        <App />
+          <App />
         </CartProvider>
       </FilterContextProvider>
     </AppProvider>
@@ -25,6 +26,3 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-
-
-
